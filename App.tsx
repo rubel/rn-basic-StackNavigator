@@ -32,13 +32,19 @@ function App(): React.JSX.Element {
         backgroundColor={backgroundStyle.backgroundColor}
       />
       <NavigationContainer>
-        <Stack.Navigator initialRouteName="Home">
+        <Stack.Navigator
+          initialRouteName="Home"
+          screenOptions={{headerShown: false}}>
           <Stack.Screen
             name="Home"
             component={HomeScreen}
             options={{title: 'Home Page'}}
           />
-          <Stack.Screen name="About" component={AboutScreen} options={{title:'About Page'}} />
+          <Stack.Screen
+            name="About"
+            component={AboutScreen}
+            options={{title: 'About Page'}}
+          />
         </Stack.Navigator>
       </NavigationContainer>
     </SafeAreaView>
